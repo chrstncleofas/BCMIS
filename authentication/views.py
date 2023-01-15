@@ -111,10 +111,11 @@ def signin(request):
         
         if user is not None:
             login(request, user)
-            # fname = user.first_name
+            fname = user.first_name
             messages.success(request, "Logged In Sucessfully!!")
-            return render(request, 'authentication/dashboard.html')
-            # return redirect('dashboard')
+            # return render(request, 'authentication/dashboard.html')
+            # return render(request, "authentication/dashboard.html",{"fname":fname})
+            return redirect('dashboard')
         else:
             messages.error(request, "Bad Credentials!!")
             return redirect('home')
