@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Home Page</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/dashboard">BCMIS</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/signin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Showcase Section -->
+  <section id="product-a">
+    <div class="container-jumbs">
+      <div class="content">
+        <h1><span class="best-color">The Barangay Candelaria</span> <br>Management System</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus numquam ipsam omnis ab suscipit? Aliquid explicabo magni blanditiis, provident nemo minima ea, ad ipsa repellendus placeat delectus a iste cupiditate corporis eius, enim dignissimos quasi fuga debitis odit accusamus quae accusantium. Eveniet quam blanditiis eum voluptates dolorum maxime. Tenetur provident quod nesciunt autem consectetur voluptatibus blanditiis aliquid laboriosam alias iure explicabo quos ratione, nisi dolore nostrum maiores non, neque optio ipsa aspernatur saepe deleniti amet sunt pariatur. Sit provident beatae recusandae culpa. Illo, dicta, non accusamus minus provident incidunt dignissimos nostrum inventore corrupti ad quidem excepturi natus. Labore, veritatis dolore.</p>
+      </div>
+      <div>
+        <img class="product-img" src="{% static 'img/logo1.jpeg' %}" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- Footers -->
+  <footer class="mt-4 mb-4" style="margin-top: 300px;">
+    <div class="text-center">
+      <span>Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Barangay Candelaria Management Information System
+      </span>
+    </div>
+  </footer>
+  </div>
+
+</body>
+
+</html>
