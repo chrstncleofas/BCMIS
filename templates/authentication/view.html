@@ -120,9 +120,38 @@
                                                 <td>{{ item.citizen }}</td>
                                                 <td>{{ item.gender }}</td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success me-1" href="{% url 'view_info' item.id %}" data-bs-toggle="modal" data-bs-target="#myModal{{resident.id}}">
+                                                    <button type="button" class="btn btn-primary me-1" href="{% url 'view_info' item.id %}" data-bs-toggle="modal" data-bs-target="#myModal{{resident.id}}">
                                                         <i class="fa-solid fa-circle-info fa-lg"></i>
                                                       </button>
+                                                      <!-- Modal -->
+                                                    <div class="modal" id="myModal{{resident.id}}" tabindex="-1" aria-labelledby="myModalLabel1" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                          <div class="modal-content">
+                                                            <div class="modal-header">
+                                                              <h5 class="modal-title">Resident : {{ item.name }}</h5>
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true"></span>
+                                                              </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                              <ul class="list-unstyled">
+                                                                <li>Full name : <strong>{{ item.name }}</strong></li>
+                                                                <li>Birthday : <strong>{{ item.birthday }}</strong></li>
+                                                                <li>Email : <strong>{{ item.email }}</strong></li>
+                                                                <li>Mobile No : <strong>{{ item.phone }}</strong></li>
+                                                                <li>Address : <strong>{{ item.address }}</strong></li>
+                                                                <li>Age : <strong>{{ item.age }}</strong></li>
+                                                                <li>Status : <strong>{{ item.status }}</strong></li>
+                                                                <li>Citizenship : <strong>{{ item.citizen }}</strong></li>
+                                                                <li>Gender : <strong>{{ item.gender }}</strong></li>
+                                                              </ul>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                                 </td>
                                             </tr>
