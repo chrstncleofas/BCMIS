@@ -83,27 +83,45 @@
     <section class="containers-tables">
         <div class="d-flex flex-column">
             <div class="container">
-                <h4 class="m-3" style="color: #333;">List of Resident</h4>
+                <h4 class="m-3" style="color: #333;"><i class="fa-solid fa-list fa-lg"></i>  List of Resident</h4>
                 <div class="row">
                     <div class="col-12">
-                        <table class="table table-hover">
-                            <thead>
-                              <tr>
-                                <th scope="col">Type</th>
-                                <th scope="col">Column heading</th>
-                                <th scope="col">Column heading</th>
-                                <th scope="col">Column heading</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr class="table-active">
-                                <th scope="row">Active</th>
-                                <td>Column content</td>
-                                <td>Column content</td>
-                                <td>Column content</td>
-                              </tr>
-                            </tbody>
-                        </table>
+                        {% if resident %}
+                        <div class="card bg-light ms-4 me-4 mb-4">
+                            <div class="card-header"><i class="fa-solid fa-list fa-lg"></i> List of All Resident</div>
+                            <div class="card-body">
+                              <p class="card-text">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Full name</th>
+                                            <th scope="col">Birthday</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Mobile No.</th>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">Age</th>
+                                            <th scope="col">Martial Status</th>
+                                            <th scope="col">Citizenship</th>
+                                            <th scope="col">Gender</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="table-active">
+                                            <th>Active</th>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                            <td>Column content</td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                              </p>
+                            </div>
+                          </div>
+                        {% else %}
+                        <h5 class="alert alert-primary ms-4 me-4">No record  List</h5>
+                        {% endif %}
                     </div>
                 </div>
             </div>
