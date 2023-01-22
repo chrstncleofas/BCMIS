@@ -175,5 +175,5 @@ def view_list(request):
     })
 
 def view_info(request, id):
-    resident = Resident.objects.get(pk=id)
-    return HttpResponseRedirect(reverse('view_list'))
+    resident = Resident.objects.get(resident, pk=id)
+    return render(reverse(request, 'view_list'))
