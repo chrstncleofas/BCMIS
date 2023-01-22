@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Add Resident Page</title>
@@ -71,22 +72,24 @@
                 </li>
             </ul>
         </aside>
-        <div class="containers">
-            <h4>Add Resident</h4>
-            <form action="">
-                <div class="form first">
-                    <div class="details personal">
-                        <span class="title">Personal Information</span>
-                        <div class="fields">
-                            <div class="input-fields">
-                                <label for="">Full Name</label>
-                                <input type="text" name="" id="" placeholder="Enter the full name" required>
+        <section class="bodies">
+            <div class="containers">
+                <h4>Add Resident</h4>
+                <form action="">
+                    <div class="form first">
+                        <div class="details personal">
+                            <span class="title">Personal Information</span>
+                            <div class="fields">
+                                <div class="input-fields">
+                                    <label for="">Full Name</label>
+                                    <input type="text" name="" id="" placeholder="Enter the full name" required>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
+        </section>
     </div>
 </body>
 </html>
