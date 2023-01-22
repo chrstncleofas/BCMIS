@@ -80,9 +80,9 @@
             </ul>
         </aside>
     </div>
-    <section class="containers-tables">
+    <section class="containers-tables" style="margin-left: 290px;">
         <div class="d-flex flex-column">
-            <div class="container">
+            <div class="container-fluid">
                 <h4 class="m-3" style="color: #333;"><i class="fa-solid fa-list fa-lg"></i>  List of Resident</h4>
                 <div class="row">
                     <div class="col-12">
@@ -107,12 +107,14 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr class="table-active">
-                                            <th>Active</th>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                            <td>Column content</td>
-                                          </tr>
+                                            {% for item in resident %}
+                                            <tr>
+                                                <td>{{ item.lname }}</td>
+                                                <td>{{ item.address }}</td>
+                                                <td>{{ item.phone }}</td>
+                                                <td>{{ item.email }}</td>
+                                            </tr>
+                                            {% endfor %}
                                         </tbody>
                                     </table>
                                 </div>
