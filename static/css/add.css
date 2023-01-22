@@ -43,10 +43,12 @@
 }
 
 .containers form .details{
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .containers form .title{
+    display: block;
+    margin-bottom: 8px;
     font-size: 16px;
     font-weight: 500;
     margin: 6px 0;
@@ -57,4 +59,37 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+form .fields .input-fields{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 15px);
+    margin: 4px 0;
+}
+
+.input-fields label{
+    font-size: 12px;
+    font-weight: 500px;
+    color: #2e2e2e;
+}
+
+.input-fields input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #aaaa;
+    color: #333;
+    border-radius: 5px;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.input-fields input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-fields input[type="date"]{
+    color: #707070;
 }
