@@ -104,15 +104,22 @@
                                             <th scope="col">Martial Status</th>
                                             <th scope="col">Citizenship</th>
                                             <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
                                           </tr>
                                         </thead>
                                         <tbody>
                                             {% for item in resident %}
                                             <tr>
-                                                <td>{{ item.lname }}</td>
-                                                <td>{{ item.address }}</td>
-                                                <td>{{ item.phone }}</td>
+                                                <td>{{ item.name }}</td>
+                                                <td>{{ item.birthday }}</td>
                                                 <td>{{ item.email }}</td>
+                                                <td>{{ item.phone }}</td>
+                                                <td>{{ item.address }}</td>
+                                                <td>{{ item.age }}</td>
+                                                <td>{{ item.status }}</td>
+                                                <td>{{ item.citizen }}</td>
+                                                <td>{{ item.gender }}</td>
+                                                <td>Action</td>
                                             </tr>
                                             {% endfor %}
                                         </tbody>
