@@ -14,7 +14,7 @@
     padding: 30px;
     margin: 0 15px;
     margin-right: -260px;
-    margin-top: -1000px;
+    margin-top: -870px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .containers header{
@@ -38,11 +38,16 @@
 .containers form{
     position: relative;
     margin-top: 16px;
-    min-height: 500px;
+    min-height: 590px;
     background-color: #f2f2f2;
+    padding: 15px;
 }
 
 .containers form .details{
+    margin-top: 30px;
+}
+
+.containers form .identity{
     margin-top: 30px;
 }
 
@@ -59,6 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 form .fields .input-fields{
@@ -91,5 +97,9 @@ form .fields .input-fields{
 }
 
 .input-fields input[type="date"]{
+    color: #707070;
+}
+
+.input-fields input[type="date"]:valid{
     color: #707070;
 }
