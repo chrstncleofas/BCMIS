@@ -11,5 +11,5 @@ urlpatterns = [
     path('add', views.add, name='add'),
     path('view_list', views.view_list, name='view_list'),
     path('signout', views.signout, name='signout'),
-    # path('<int:id>', views.view_info, name='view_info'),
+    path('<int:id>/view_info/', views.view_info, name='view_info'),
 ]
