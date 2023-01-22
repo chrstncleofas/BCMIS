@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.mail import EmailMessage, send_mail
@@ -171,3 +173,7 @@ def view_list(request):
     return render(request, 'authentication/view.html', {
         'resident' : Resident.objects.all(),
     })
+
+def view_info(request, id):
+    resident = Resident.objects.get(pk=id)
+    return HttpResponseRedirect(reverse('view_list'))
