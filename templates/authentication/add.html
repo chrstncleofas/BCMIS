@@ -76,7 +76,8 @@
     <section class="bodies">
         <div class="containers">
             <header>Add Resident</header>
-            <form action="">
+            <form action="{% url 'add' %}" method="POST">
+                {% csrf_token %}
                 <div class="form first">
                     <div class="details personal">
                         <span class="title">Personal Information</span>
