@@ -133,6 +133,38 @@ def signout(request):
     return redirect('home')
 
 def add(request):
+    if request.method == 'POST':
+
+        name = request.POST.get('name')
+        birthday = request.POST.get('email')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        address = request.POST.get('address')
+        age = request.POST.get('age')
+        status = request.POST.get('status')
+        citizen = request.POST.get('citizen')
+        gender = request.POST.get('gender')
+        id_type = request.POST.get('id_type')
+        id_no = request.POST.get('id_no')
+        member = request.POST.get('member')
+
+        resident = Resident.objects.create()
+
+        resident.name = name
+        resident.birthday = birthday
+        resident.email = email
+        resident.phone = phone
+        resident.address = address
+        resident.age = age
+        resident.status = status
+        resident.citizen = citizen
+        resident.gender = gender
+        resident.id_type = id_type
+        resident.id_no = id_no
+        resident.member = member
+
+        resident.save()
+
     return render(request, 'authentication/add.html')
 
 def view_list(request):
