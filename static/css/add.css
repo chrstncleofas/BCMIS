@@ -43,6 +43,19 @@
     padding: 15px;
 }
 
+.containers form button{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 .containers form .details{
     margin-top: 30px;
 }
