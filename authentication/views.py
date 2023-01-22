@@ -133,3 +133,6 @@ def signout(request):
 
 def add(request):
     return render(request, 'authentication/add.html')
+
+def view_list(request):
+    return render(request, 'authentication/view.html')
