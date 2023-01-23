@@ -116,3 +116,16 @@ form .fields .input-fields{
 .input-fields input[type="date"]:valid{
     color: #707070;
 }
+
+@media only screen and (max-width: 1376px)  {
+    .containers{
+        max-width: 1000px;
+        width: 100%;
+        margin-right: -260px;
+        margin-top: -700px;
+        height: 600px;
+    }
+    .containers form{
+        min-height: 537px;
+    }
+}
