@@ -23,6 +23,14 @@
                 margin-right: -260px;
                 margin-top: 220px;
             }
+            #cards-box-section{
+                max-width: 1120px;
+                width: 100%;
+            }
+            #txt-header{
+                margin: 0px;
+                width: 400px;
+            }
         }
     </style>
 </head>
@@ -91,11 +99,11 @@
     <section class="containers-tables">
         <div class="d-flex flex-column">
             <div class="container-fluid">
-                <h4 class="m-3" style="color: #333;"><i class="fa-solid fa-list fa-lg"></i>  List of Resident</h4>
-                <div class="row">
+                <h4 class="m-3" style="color: #333;" id="txt-header"><i class="fa-solid fa-list fa-lg"></i>  List of Resident</h4>
+                <div class="row" id="row-lister">
                     <div class="col-12">
                         {% if resident %}
-                        <div class="card bg-light ms-4 me-4 mb-4">
+                        <div class="card bg-light ms-4 me-4 mb-4" id="cards-box-section">
                             <div class="card-header"><i class="fa-solid fa-list fa-lg"></i> List of All Resident</div>
                             <div class="card-body">
                               <p class="card-text">
@@ -104,13 +112,10 @@
                                         <thead>
                                           <tr>
                                             <th scope="col">Full name</th>
-                                            <th scope="col">Birthday</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">Mobile No.</th>
                                             <th scope="col">Address</th>
                                             <th scope="col">Age</th>
-                                            <th scope="col">Martial Status</th>
-                                            <th scope="col">Citizenship</th>
                                             <th scope="col">Gender</th>
                                             <th scope="col">Info</th>
                                           </tr>
@@ -119,13 +124,10 @@
                                             {% for item in resident %}
                                             <tr>
                                                 <td>{{ item.name }}</td>
-                                                <td>{{ item.birthday }}</td>
                                                 <td>{{ item.email }}</td>
                                                 <td>{{ item.phone }}</td>
                                                 <td>{{ item.address }}</td>
                                                 <td>{{ item.age }}</td>
-                                                <td>{{ item.status }}</td>
-                                                <td>{{ item.citizen }}</td>
                                                 <td>{{ item.gender }}</td>
                                                 <td>
                                                     <button type="button" class="btn btn-primary me-1" href="{% url 'view_info' item.id %}" data-bs-toggle="modal" data-bs-target="#myModal{{resident.id}}">

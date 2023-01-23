@@ -2,16 +2,3 @@
     margin-top: -800px !important;
     margin-left: 290px !important;
 }
-
-@media only screen and (max-width: 1376px)  {
-    .containers{
-        max-width: 1000px;
-        width: 100%;
-        margin-right: -260px;
-        margin-top: -700px;
-        height: 600px;
-    }
-    .containers form{
-        min-height: 537px;
-    }
-}
