@@ -177,3 +177,9 @@ def view_list(request):
 def view_info(request, id):
     resident = Resident.objects.get(pk=id)
     return HttpResponseRedirect(reverse('view_list'))
+
+def delete_list(request, id):
+    if request.method == 'POST':
+        resident = Resident.objects.get(pk=id)
+        resident.delete()
+    return HttpResponseRedirect(reverse('view_list'))
