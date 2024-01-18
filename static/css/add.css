@@ -129,3 +129,18 @@ form .fields .input-fields{
         min-height: 537px !important;
     }
 }
+
+/* Existing styles */
+
+@media (max-width: 1450px) {
+    .containers {
+        max-width: 1000px !important;
+        width: 100% !important;
+        margin-right: -260px !important;
+        margin-top: -650px !important;
+        height: 560px !important;
+    }
+    .containers form {
+        min-height: 505px !important;
+    }
+}
