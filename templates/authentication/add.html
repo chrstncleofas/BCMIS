@@ -86,13 +86,10 @@
                 </li>
             </ul>
         </aside>
-    </div>
-    <section class="bodies" style="margin-top: 20px;">
-        <div class="containers">
-            <header>Add Resident</header>
+        <main class="main-container">
             <form action="{% url 'add' %}" method="POST">
                 {% csrf_token %}
-                <div class="form first">
+                <div id="mainForm" class="form first" style="display: grid; grid-template-columns: repeat(2, 1fr);">
                     <div class="details personal">
                         <span class="title">Personal Information</span>
                         <div class="fields">
@@ -165,7 +162,7 @@
                     </div>
                 </div>
             </form>
-        </div>
-    </section>
+        </main>
+    </div>
 </body>
 </html>

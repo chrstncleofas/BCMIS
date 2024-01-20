@@ -144,3 +144,9 @@ form .fields .input-fields{
         min-height: 505px !important;
     }
 }
+
+#mainForm {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 10px;
+}
